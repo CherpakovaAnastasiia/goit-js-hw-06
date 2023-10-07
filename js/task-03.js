@@ -18,13 +18,6 @@ const images = [
 
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
- 
-
-// const ul = document.querySelector(".gallery");
-// images.map({img, alt}) => {
-//   const img = document.createElement("img");
-// ul.insertAdjacentHTML("afterend", img);
-// }
 
 
 const gallery = document.querySelector(".gallery");
