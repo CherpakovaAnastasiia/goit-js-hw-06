@@ -10,33 +10,20 @@
 
 
 
-const categories = document.getElementById("categories");
-console.log(categories);
+const categoriesList = document.querySelectorAll('.item');
+console.log(`Number of categoris: ${categoriesList.length}`);
 
-const categoryElements = Array.from(categories.children);
+const firstCategotiesItem = categoriesList.firstElementChild;
+const lastCategoriesItem = categoriesList.lastElementChild;
+const listItem = categoriesList.children;
 
-const allCategories = categories.children.length;
-console.log(`Number of categories: ${categories.children.length}`);
+categoriesList.forEach(category => {
+    const categoryName = category.querySelector('h2').textContent;
+    const elementsCount = category.querySelectorAll('ul > li').length;
+    console.log(`Category: ${categoryName}`);
+    console.log(`Elements: ${elementsCount}`);
+    });
 
-
-
-allCategories.forEach((category) => {
-  const categoryTitle = category.querySelector("h2").textContent;
-  const categoryItemsList = category.querySelectorAll("li");
-
-  console.log(`Category: ${categoryTitle}`);
-  console.log(`Elements: ${categoryItemsList.length}`);
-});
-
-
-// const firstListItem = list.firstElementChild;
-// console.log(firstListItem);
-
-// const lastListItem = list.lastElementChild;
-// console.log(lastListItem);
-
-// const listItems = list.children;
-// console.log(listItems);
 
 
 // ПЕРШИЙ ВАРІАНТ
